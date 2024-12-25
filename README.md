@@ -20,22 +20,9 @@ This project focuses on developing a robust deep learning pipeline for waste cla
 
 <div>
    <h2>Dataset</h2>
-   <p>The Real Waste Dataset[1] contains 4752 labeled images spanning 9 categories:</p>
-   <div style="display: flex; align-items: flex-start;">
-   <ul>
-      <li>Cardboard</li>
-      <li>Food Organics</li>
-      <li>Glass</li>
-      <li>Metal</li>
-      <li>Miscellaneous Trash</li>
-      <li>Paper</li>
-      <li>Plastic</li>
-      <li>Textile Trash</li>
-      <li>Vegetation</li>
-   </ul>
+   <p>The Real Waste Dataset[1] contains 4752 labeled images spanning 9 categories:</p>   
    <div style="margin-left: 200px;">
       <img src="images/whole_dataset.png" alt="Waste categories illustration" style="max-width: 500px; height: auto;">
-   </div>
    </div>
 </div>
 
@@ -64,9 +51,9 @@ The dataset is available on [Kaggle](https://www.kaggle.com/datasets/joebeachcap
 - **Best Model**: MobileNetV2
 - **Accuracy**: 93.28%
 - **Confusion Matrix**:<br>
-   <img src="images/confusion_matrices(mobilenetv2).png" alt="Confusion Matrix" style="max-width: 500px; height: auto;">
+   <img src="images/confusion_matrices(mobilenetv2).png" alt="Confusion Matrix" style="max-width: 300px; height: auto;">
 - **Precision, Recall, F1-Score**:<br>
-   <img src="images/classification_metrics_trained_MobileNetV2_model.pth.png" alt="Precision, Recall, F1-Score" style="max-width: 900px; height: auto">
+   <img src="images/classification_metrics_trained_MobileNetV2_model.pth.png" alt="Precision, Recall, F1-Score" style="max-width: 1000px; height: auto">
 
 ## Requirements
 - Python 3.8 or later
@@ -80,7 +67,7 @@ The dataset is available on [Kaggle](https://www.kaggle.com/datasets/joebeachcap
 Contributions are welcome! Please fork the repository and submit a pull request.
 
 ## References
-1. Real Waste Dataset: [Kaggle Dataset](https://www.kaggle.com/)
+1. Real Waste Dataset: [Kaggle Dataset](http://dx.doi.org/10.3390/info14120633)
 2. ResNet50: [Deep Residual Learning for Image Recognition](https://arxiv.org/abs/1512.03385)
 3. DenseNet121: [Densely Connected Convolutional Networks](https://arxiv.org/abs/1608.06993)
 4. MobileNetV2: [Inverted Residuals and Linear Bottlenecks](https://arxiv.org/abs/1801.04381)
