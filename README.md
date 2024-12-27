@@ -9,6 +9,7 @@ Improper waste management poses a significant environmental challenge, necessita
   - [Table of Contents](#table-of-contents)
   - [Project Overview](#project-overview)
   - [Methodology](#methodology)
+    - [Custom CNN Architecture](#custom-cnn-architecture)
   - [Results](#results)
   - [Requirements](#requirements)
   - [Contributions](#contributions)
@@ -46,6 +47,12 @@ The dataset is available on [Kaggle](https://www.kaggle.com/datasets/joebeachcap
    - Accuracy.
    - Confusion matrix.
    - Precision, Recall, F1-Score.
+
+### Custom CNN Architecture
+The custom CNN consists of 5 convolutional blocks, each convolutional block contains 2 convolutional layers, after each convolutional layer we applied batch normalization and ReLU activation. Once both convolutional layers in the block have been processed we applied max-pooling for down-sampling. The number of filters doubles with each block, starting from 64 and reaching 512 in the final block.
+After the 5 convolutional blocks, a Global Average Pooling layer reduces the spatial dimensions to a single value per feature map,the resulting output is then flattened and passed through a fully connected layer with 512 neurons, followed by a 30% dropout layer for regularization and finally the last fully connected layer maps the 512-dimensional input to an output of size equal to the number of classes for classification.
+
+<img src="images/custom_cnn.png" alt="Custom CNN Architecture" style="max-width: 1000px; height: auto;">
 
 ## Results
 - **Best Model**: MobileNetV2
