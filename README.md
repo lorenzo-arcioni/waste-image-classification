@@ -11,6 +11,7 @@ Improper waste management poses a significant environmental challenge, necessita
   - [Methodology](#methodology)
     - [Custom CNN Architecture](#custom-cnn-architecture)
   - [Results](#results)
+    - [Observations from Misclassification Analysis](#observations-from-misclassification-analysis)
   - [Requirements](#requirements)
   - [Contributions](#contributions)
   - [References](#references)
@@ -61,6 +62,24 @@ After the 5 convolutional blocks, a Global Average Pooling layer reduces the spa
    <img src="images/confusion_matrices(mobilenetv2).png" alt="Confusion Matrix" style="max-width: 300px; height: auto;">
 - **Precision, Recall, F1-Score**:<br>
    <img src="images/classification_metrics_trained_MobileNetV2_model.pth.png" alt="Precision, Recall, F1-Score" style="max-width: 1000px; height: auto">
+
+### Observations from Misclassification Analysis
+
+The analysis of misclassified samples reveals that the model demonstrates a solid understanding of the waste classification problem. It effectively captures the key features of objects across various categories, indicating strong generalization capabilities. However, the model also exhibits certain limitations, which stem from the inherent complexities of waste classification:
+
+1. **Visual Similarities:** 
+   - Glass and plastic bottles often appear similar in shape and texture.
+   - Paper and cardboard share visual characteristics that can be challenging to distinguish, even for humans.
+
+2. **Mixed-Class Objects:**
+   - Items in the "Miscellaneous Trash" category frequently consist of multiple materials (e.g., plastic, metal, and paper), making them prone to misclassification.
+
+3. **Dataset Limitations:** 
+   - The accuracy of the model could be further improved with the addition of more diverse and representative training data, particularly for underrepresented or ambiguous categories.
+
+Overall, the model performs admirably, generalizing well and classifying objects effectively across most categories. Addressing these inherent challenges with enriched training data and advanced techniques would likely enhance its predictive performance further.
+
+<img src="images/misclassification_analysis.png" alt="Misclassification Analysis" style="max-width: 1000px; height: auto">
 
 ## Requirements
 - Python 3.8 or later
